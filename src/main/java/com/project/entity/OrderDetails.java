@@ -29,7 +29,6 @@ public class OrderDetails implements Serializable{/**
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	//@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id")
 	private int id;
 		
@@ -48,16 +47,3 @@ public class OrderDetails implements Serializable{/**
 	private Products product;
 	
 }
-
-
-/*
- create table order_details
-(
-	id				bigint			primary key auto_increment,
-	orderId			bigint references orders(id),
-	productId		bigint,
-    foreign key(productId) references products(id),
-	price			decimal(12,3)	not null,
-	quantity		int				not null
-)
- */

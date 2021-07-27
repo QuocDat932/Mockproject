@@ -22,12 +22,9 @@ public class OrderServicesimpl implements Orderservices{
 	@Transactional
 	public Orders insert(Orders order) throws Exception {
 		try {
-			Optional<Users> result = repoUS.findById(21);
-			Users user = result.isPresent()? result.get() : null;
-			System.out.println(user.getFullname() +"ID = "+ user.getId());
-			order.setUser(user);
-			//System.out.println(order.getUser().getId() + "\nBefore Save and flush");
-			return repo.saveAndFlush(order);
+			repo.saveAndFlush(order);
+			Orders latOrder = repo.LastOrder();
+			return latOrder;
 		} catch (Exception e) {
 			e.printStackTrace();
 			return null;

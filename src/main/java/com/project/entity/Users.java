@@ -38,8 +38,6 @@ public class Users implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	//@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	//@SequenceGenerator(name="Identity_Users", sequenceName = "Identity_Users")
 	@Column(name ="id")
 	private int id;
 	
@@ -54,10 +52,10 @@ public class Users implements Serializable {
 	
 	@Column(name="email")
 	private String email;
-	/*
-	@Column(name="createdate")
-	//@CreationTimestamp
-	private Date createDate;
+	
+	/*@Column(name="createdate")
+	@CreationTimestamp
+	//private Date createDate;
 	private Timestamp createDate;
 	*/
 	@Column(name="imgurl")

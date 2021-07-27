@@ -28,7 +28,6 @@ public class Products implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	//@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name ="id")
 	private int id;
 	
@@ -61,16 +60,3 @@ public class Products implements Serializable{
 	@JoinColumn(name="unitid", referencedColumnName = "id")
 	private UnitType unitType;
 }
-/*
- 	id				bigint			primary key auto_increment,
-	`name`			nvarchar(255)	not null,
-	typeId			tinyint,
-    foreign key(typeId) references types_of_product(id),
-	quantity		int				not null,
-	price			decimal(12,3)	not null,
-	unitId			tinyint,
-    foreign key(unitId) references unit_types(id),
-	imgUrl			varchar(255)	null,
-	`description`	nvarchar(20)	null,
-	isDeleted		bit				not null default 0
- * */

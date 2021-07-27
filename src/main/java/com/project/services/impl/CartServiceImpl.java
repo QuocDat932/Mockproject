@@ -99,6 +99,10 @@ public class CartServiceImpl implements CartService {
 		try {
 			System.out.println("before insert\n");
 			Orders orderReturn = orderservices.insert(order);
+			System.out.println("Addresssss : "+orderReturn.getAddress());
+			System.out.println("Addresssss : "+orderReturn.getId());
+			System.out.println("Addresssss : "+orderReturn.getPhone());
+			System.out.println("Addresssss : "+orderReturn.getUser().getId());
 			if(!ObjectUtils.isEmpty(orderReturn)) {
 				for(cartDetailDto cartDetailDto : cart.getListDetail().values()) {
 					cartDetailDto.setIdOrder(orderReturn.getId());

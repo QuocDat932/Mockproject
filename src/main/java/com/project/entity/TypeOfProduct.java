@@ -28,7 +28,6 @@ public class TypeOfProduct implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	//@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id")
 	private int id;
 	
@@ -41,11 +40,3 @@ public class TypeOfProduct implements Serializable{
 	private String slug;
 	
 }
-/*
-create table unit_types
-(
-	id				tinyint			primary key auto_increment,
-	`description`	nvarchar(20)	null,
-	isDeleted		bit				not null default 0
-)
- * */
