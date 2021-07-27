@@ -45,11 +45,11 @@ public class Orders implements Serializable{
 	
 	@Column(name ="phone")
 	private String phone;
-	/*
+	
 	@Column(name ="createddate")
 	@CreationTimestamp
 	private Timestamp createDate;
-	*/
+	
 	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
 	@JoinColumn(name="userid" ,referencedColumnName = "id")
 	@JsonIgnoreProperties(value = {"applications", "hibernateLazyInitializer"})
@@ -57,14 +57,3 @@ public class Orders implements Serializable{
 	
 }
 
-/*
- 
- create table orders
-(
-	id				bigint			primary key auto_increment,
-	userId			bigint,
-    foreign key(userId) references users(id),
-	createdDate		datetime		not null default now()
-);
-  
- * */

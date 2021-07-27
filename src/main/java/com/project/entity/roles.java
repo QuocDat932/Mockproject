@@ -27,16 +27,9 @@ public class roles implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 	@Id
-	//@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name ="id")
 	private int id; // primary key
 	
 	@Column(name ="description")
 	private String description;
 }
-/*
- (
-	id				tinyint			primary key auto_increment,
-	`description`	nvarchar(20)	not null unique
-)
- * */
